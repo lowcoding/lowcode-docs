@@ -12,4 +12,4 @@ jobs:
               env:
                   ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                   BUILD_SCRIPT: yarn && yarn docs:build
-                  BUILD_DIR: lowcode-docs/lowcode-docs/docs/.vuepress/dist/
+                  BUILD_DIR: docs/.vuepress/dist/
