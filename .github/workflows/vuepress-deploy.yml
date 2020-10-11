@@ -1,0 +1,14 @@
+name: Build and Deploy
+on: [push]
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@master
+
+            - name: vuepress-deploy
+              env:
+                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                  BUILD_SCRIPT: yarn && yarn docs:build
+                  BUILD_DIR: lowcode-docs/.vuepress/dist/
