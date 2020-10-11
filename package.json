@@ -1,0 +1,19 @@
+{
+	"name": "lowcode-docs",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/lowcoding/lowcode-docs.git",
+	"author": "wjkang <ruoxieme@gmail.com>",
+	"scripts": {
+		"docs:dev": "vuepress dev docs",
+		"docs:build": "vuepress build docs"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"core-js": "2.6.11",
+		"vuepress": "^1.6.0"
+	},
+	"dependencies": {
+		"vuepress-theme-antdocs": "^1.2.0"
+	}
+}
