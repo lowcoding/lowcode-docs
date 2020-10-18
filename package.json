@@ -5,13 +5,14 @@
 	"repository": "https://github.com/lowcoding/lowcode-docs.git",
 	"author": "wjkang <ruoxieme@gmail.com>",
 	"scripts": {
-		"docs:dev": "vuepress dev docs",
-		"docs:build": "vuepress build docs"
+		"dev": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev docs",
+		"build": "vuepress build docs"
 	},
 	"license": "MIT",
 	"devDependencies": {
 		"core-js": "2.6.11",
-		"vuepress": "^1.6.0"
+		"nodemon": "^2.0.5",
+		"vuepress": "^1.7.1"
 	},
 	"dependencies": {
 		"vuepress-theme-antdocs": "^1.2.0"
