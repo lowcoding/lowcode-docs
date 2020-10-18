@@ -11,4 +11,8 @@ module.exports = [
 		text: 'lowcode-mock',
 		link: '/lowcode-mock/',
 	},
+	{
+		text: '国内镜像',
+		link: 'https://lowcoding.gitee.io/',
+	},
 ]

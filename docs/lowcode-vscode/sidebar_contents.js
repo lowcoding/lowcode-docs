@@ -1,1 +1,1 @@
-module.exports = ['/lowcode-vscode/']
+module.exports = ['/lowcode-vscode/', 'getting-started']

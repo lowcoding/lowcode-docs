@@ -26,7 +26,7 @@ module.exports = {
 		logo: '/assets/logo.png',
 		nav: require('./config/nav'),
 		sidebar: require('./config/sidebar'),
-		sidebarDepth: 0,
+		sidebarDepth: 4,
 		lastUpdated: '上次更新',
 		repo: 'https://github.com/lowcoding',
 		editLinks: false,
