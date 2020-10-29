@@ -3,8 +3,32 @@ title: 关于
 ---
 ## 是什么
 
-[lowcode-vscode](https://marketplace.visualstudio.com/items?itemName=wjkang.yapi-code) 是一个 vscode 插件。主要功能
+[lowcode-vscode](https://marketplace.visualstudio.com/items?itemName=wjkang.yapi-code) 是一个 vscode 插件。
+
+功能特性：
+
+* 预先定义好代码模板（还有一个高大上的名词叫做物料），在`lowcode-vscode`中分为`代码片段`以及`区块`两种类型。
+
+* 通过菜单命令，选择需要的模板，模板 + 数据通过编译之后产生特定的代码并自动添加到项目中。
+
+* 通过可视化界面，提供比菜单命令更多的供能。
+
+* 支持选中某段代码快速创建代码片段。
+
+* 支持通过 git 或者 npm 包的方式共享物料。
+
+* 集成 `yapi-code` 的供能，即根据 JSON 数据或者拉取 YAPI 接口定义生成 TS 类型。
+
 
 ## 为什么造轮子
 
 
+之前一直有写一个前端工作台的想法，把一些重复性的东西交给工具去做，也研究了 `vue-cli-ui`和 `umi-ui`的实现，但迟迟没有着手去写。
+
+
+某段时间，因为用 TS 写接口请求的时候，深深感受到类型定义真是个体力活。所以写了个 vscode 插件 `yapi-code`：根据 JSON 数据或者拉取 YAPI 接口定义，再使用定义好的模板直接生成前端接口请求的代码。
+
+在开发 `yapi-code`的过程中，发现以 vscode 插件的形式来实现前端工作台会比 `vue-cli-ui`和 `umi-ui`的实现方式简单很多，而且可以直接在 `yapi-code` 的代码基础上添加相应的供能。
+
+
+在开发的过程中，偶然发现 `飞冰` 已经由客户端软件转为 vscode 插件的形式。简单用了下，发现提供的功能并不能满足我的需要，所以还是继续造轮子。但是物料开发的功能上，采用了和`飞冰`一样的结构，使得为 `飞冰`开发的物料也能在`lowcode-vscode`上使用。
