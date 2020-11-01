@@ -5,7 +5,7 @@
 	"repository": "https://github.com/lowcoding/lowcode-docs.git",
 	"author": "wjkang <ruoxieme@gmail.com>",
 	"scripts": {
-		"dev": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev docs",
+		"dev": "nodemon --ext md,vue,js --watch .vuepress --watch . --exec vuepress dev docs",
 		"build": "vuepress build docs"
 	},
 	"license": "MIT",

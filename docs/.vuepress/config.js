@@ -25,8 +25,31 @@ module.exports = {
 		smoothScroll: true,
 		logo: '/assets/logo.png',
 		nav: require('./config/nav'),
-		sidebar: require('./config/sidebar'),
-		sidebarDepth: 4,
+		sidebar: {
+			'/lowcode-mock/': ['/lowcode-mock/'],
+			'/lowcode-vscode/': [
+				'/lowcode-vscode/',
+				'getting-started',
+				{
+					title: '具体功能及使用指南',
+					collapsable: false,
+					sidebarDepth: 3,
+					path: '/lowcode-vscode/detailed-features/',
+					children: [
+						'detailed-features/generate-code-by-command',
+						'detailed-features/generate-code-by-webview',
+					],
+				},
+				{
+					title: '附加说明',
+					collapsable: false,
+					sidebarDepth: 3,
+					children: ['more/settings'],
+				},
+				'change-log',
+			],
+		},
+		sidebarDepth: 9,
 		lastUpdated: '上次更新',
 		repo: 'https://github.com/lowcoding',
 		editLinks: false,
