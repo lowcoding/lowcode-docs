@@ -33,7 +33,7 @@ module.exports = {
 				{
 					title: '具体功能及使用指南',
 					collapsable: false,
-					sidebarDepth: 3,
+					sidebarDepth: 2,
 					path: '/lowcode-vscode/detailed-features/',
 					children: [
 						'detailed-features/generate-code-by-command',
@@ -43,13 +43,13 @@ module.exports = {
 				{
 					title: '附加说明',
 					collapsable: false,
-					sidebarDepth: 3,
+					sidebarDepth: 2,
 					children: ['more/settings'],
 				},
 				'change-log',
 			],
 		},
-		sidebarDepth: 9,
+		sidebarDepth: 2,
 		lastUpdated: '上次更新',
 		repo: 'https://github.com/lowcoding',
 		editLinks: false,
