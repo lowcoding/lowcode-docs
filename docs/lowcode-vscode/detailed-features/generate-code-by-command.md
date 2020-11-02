@@ -13,7 +13,7 @@ title: 生成代码
 
 当执行此功能的时候，插件内部会判断剪贴板内是否为`yapi`的接口ID（纯数字内容）或者 `JSON` 数据。如果都不是则终止执行。
 
-## 根据 yapi 接口定义生成代码
+## 根据 YAPI 接口定义生成代码
 
 如果剪贴板内数据为`yapi`的接口ID（纯数字内容），则弹出选择框，选择配置的`yapi`项目（具体如何配置可查看插件配置一节）：
 
@@ -98,7 +98,105 @@ const model = {
 }
 ```
 
+**type**
+
+剪贴板内 `JSON` 数据或者 `yapi` 接口定义返回数据转换为 TS 接口类型的代码。
+  
+<br/>
+
+**requestBodyType**
+
+`yapi` 接口定义提交数据转换为 TS 接口类型的代码。
+
+<br/>
+
+**funcName**
+
+编辑器选中的文本通过空格' '分割后的第一个元素，如果没有，默认值为 `fetch`
+
+<br/>
+
+**typeName**
+
+编辑器选中的文本通过空格' '分割后的第二个元素, 如果没有，使用 `funcName` 处理后得到，比如：
+
+`funcName` 为 `fetch`，那么 `typeName` 为 `IFetchResult`
+
+<br/>
+
+**api**
+
+为 `yapi` 接口定义信息。具体可查看 `yapi` **获取接口数据**的 [开放api文档](https://yapi.baidu.com/doc/openapi.html)
+
+<br/>
+
+**inputValues**
+
+编辑器中选中的文本通过空格' '分割后的数组，第一个元素就是 `funcName`，第二个就是 `typeName`，模板中可以通过下标取到，比如 `inputValues[0]`
+
+<br/>
+
+**mockCode**
+
+生成的 mock 代码，主要是数组类型数据的生成代码。
+
+比如有如下 json 数据：
+```js
+const json = {
+	values: [1, 2, 3, 4, 5, 6],
+}
+```
+
+对应的 mockCode 为：
+
+```js
+const list1 = []
+for (let i = 0; i < 10; i++) {
+	list1.push(Random.natural(100, 1000))
+}
+```
+
+> Random.natural(100, 1000) 可通过插件配置项进行配置
+
+<br/>
+
+**mockData**
+
+生成的 mock 数据，结合 `mockCode` 使用可创建一个 mock 模板，自动生成接口 mock，比如
+
+```js
+.get(`xxxxx`, async (ctx, next) => { 
+	<%- mockCode %> ctx.body = <%= mockData %>
+})
+
+```
+生成代码如下：
+```js
+.get(`xxxxx`, async (ctx, next) => {
+	const list1 = []
+	for (let i = 0; i < 10; i++) {
+		list1.push(Random.natural(100, 1000))
+	}
+	ctx.body = { values: list1 }
+})
+```
+
+<br/>
+
+**rawSelectedText**
+
+编辑器中选中的原始文本
+
+<br/>
+
+**rawClipboardText**
+
+系统剪切板中的原始文本
+
+
 ## 模板例子
+
+这是一个拉取 `YAPI` 接口数据，生成前端接口请求代码的模板。
 
 ```
 <%= type %>  
