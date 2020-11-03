@@ -63,4 +63,9 @@ module.exports = {
 			msgOkText: '确定',
 		},
 	},
+	plugins: {
+		'@vuepress/medium-zoom': {
+			selector: 'img',
+		},
+	},
 }

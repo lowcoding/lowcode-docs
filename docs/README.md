@@ -5,7 +5,7 @@ actionText: 快速上手
 actionLink: /#快速上手
 features:
     - title: 提效工具
-      details: 支持抽离常用代片段、功能区块为模板（物料），代替频繁复制粘贴的体力活。
+      details: 支持抽离常用代片段、功能区块为模板（物料），代替频繁复制粘贴。
     - title: 适用范围广
       details: 与项目使用的框架、库甚至语言无关，能在重复的代码中抽离出模板即可。
     - title: 可视化操作
@@ -60,11 +60,9 @@ footer: MIT Licensed | Copyright © 2020-present ruoxie-Handed
 
 <p align="center"><img src="https://jaycewu.gitee.io/image-hosting/lowcode-preview.gif"/></p>
 
-
+<br>
 
 ## 贡献者
-
-<p></p>
 
 <a-tooltip placement="bottom">
   <template slot="title">

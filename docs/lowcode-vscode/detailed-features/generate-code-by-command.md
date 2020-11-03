@@ -94,7 +94,7 @@ const model = {
 	mockCode：string; // 生成的 mock 代码，主要是 数组类型数据的生成代码
 	mockData: string; // 生成的 mock 数据
 	rawSelectedText: string; //编辑器中选中的原始文本
-    rawClipboardText: string; //系统剪切板中的原始文本
+    rawClipboardText: string; //系统剪贴板中的原始文本
 }
 ```
 
@@ -191,14 +191,14 @@ for (let i = 0; i < 10; i++) {
 
 **rawClipboardText**
 
-系统剪切板中的原始文本
+系统剪贴板中的原始文本
 
 
 ## 模板例子
 
 这是一个拉取 `YAPI` 接口数据，生成前端接口请求代码的模板。
 
-```
+```js
 <%= type %>  
 <% if (api.req_query.length > 0 || api.req_params.length > 0) { %>
 export interface I<%= funcName.slice(0, 1).toUpperCase() + funcName.slice(1) %>Params {
@@ -212,7 +212,7 @@ export interface I<%= funcName.slice(0, 1).toUpperCase() + funcName.slice(1) %>P
 
 /**
 * <%= api.title %> 
-* https://yapi.bu6.io/project/<%= api.project_id %>/interface/api/<%= api._id %> 
+* https://yapi.baidu.com/project/<%= api.project_id %>/interface/api/<%= api._id %> 
 * @author <%= api.username %>  
 * 
 <% if (api.req_query.length > 0 || api.req_params.length > 0) { -%>* @param {I<%= funcName.slice(0, 1).toUpperCase() + funcName.slice(1) %>Params} params<% } %>
@@ -227,10 +227,64 @@ params: I<%= funcName.slice(0, 1).toUpperCase() + funcName.slice(1) %>Params,
 data: I<%= funcName.slice(0, 1).toUpperCase() + funcName.slice(1) %>Data
 <% } %> 
 ) {
-return request<<%= typeName %>>(`/galaxy<%= api.query_path.path.replace(/\{/g,"${params.") %><% if(api.req_query.length>0) { %>?<% api.req_query.map(query => { %><%= query.name %>=${params.<%= query.name %>}&<% }) %><% } %>`, {
+return request<<%= typeName %>>(`<%= api.query_path.path.replace(/\{/g,"${params.") %><% if(api.req_query.length>0) { %>?<% api.req_query.map(query => { %><%= query.name %>=${params.<%= query.name %>}&<% }) %><% } %>`, {
 		method: '<%= api.method %>',
 <% if (requestBodyType) {%>data,<% } %> 
 	})
+}
+```
+`YAPI` 接口定义如下：
+
+![](https://gitee.com/img-host/img-host/raw/master//2020/11/03/1604410094022.png)
+
+编译之后生成如下代码：
+```js
+export interface IYapiRequestResult {
+  code: number;
+  msg: string;
+  pagination: {
+    total: number;
+  };
+  result: {
+    id: number;
+    name: string;
+    price: number;
+    description: string;
+    sku: string;
+    spu: string;
+    image: string;
+  }[];
+}
+
+export interface IFetchParams {
+  name: 请手动修改此类型;
+  sku: 请手动修改此类型;
+  status: 请手动修改此类型;
+}
+
+export interface IFetchData {
+  name?: string;
+  sku?: string;
+  status?: number;
+}
+
+/**
+ * 获取产品列表
+ * https://yapi.baidu.com/project/8641/interface/api/89813
+ * @author 若邪
+ *
+ * @param {IFetchParams} params
+ * @param {IFetchData} data
+ * @returns
+ */
+export function fetch(params: IFetchParams, data: IFetchData) {
+  return request<IYapiRequestResult>(
+    `/product/list?name=${params.name}&sku=${params.sku}&status=${params.status}&`,
+    {
+      method: 'POST',
+      data,
+    },
+  );
 }
 ```
 

@@ -17,3 +17,5 @@ title: 快速上手
 ## 效果预览
 
 <p align="center"><img src="https://jaycewu.gitee.io/image-hosting/lowcode-preview.gif"/></p>
+
+![](https://gitee.com/img-host/img-host/raw/master//2020/11/03/1604413145869.gif)
