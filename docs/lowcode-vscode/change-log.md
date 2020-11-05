@@ -8,80 +8,72 @@ title: 更新日志
 
 <template>
   <a-timeline>
-    <a-timeline-item>
-      v1.2.0
-      <p>
-        更新内容：<br/>
-        &emsp;- <a-tag color="orange">新增</a-tag> 新增 多语言设置。<br/>
-      </p>
-    </a-timeline-item>
-    <a-timeline-item>
-      v1.1.1
-      <p>
-        更新内容：<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 优化侧边栏标题过长时鼠标悬停的显示效果；<br/>
-        &emsp;- <a-tag color="purple">修复</a-tag> 修复移动端侧边栏按钮展开状态显示异常的BUG。<br/>
-      </p>
-    </a-timeline-item>
-    <a-timeline-item>
-      v1.1.0
-      <p>
-        更新内容：<br/>
-        &emsp;- <a-tag color="orange">新增</a-tag> 新增 Repo 状态图标；<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 更改依赖版本号至最新版本。<br/>
-      </p>
-    </a-timeline-item>
-    <a-timeline-item>
-      v1.0.1
-      <p>
-        更新内容：<br/>
-        &emsp;- <a-tag color="purple">修复</a-tag> 修复代码块显示 css/cpp/c 语言标识异常的BUG；<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 优化其他细节。<br/>
-      </p>
-    </a-timeline-item>
-    <a-timeline-item>
-      v1.0.0
-      <a-tag color="green">正式版</a-tag>
-      <p>
-        更新内容：<br/>
-        &emsp;- <a-tag color="orange">新增</a-tag> 添加侧边栏广告位，支持三种显示状态（图片、图文、招待显示）； <br/>
-        &emsp;- <a-tag color="orange">新增</a-tag> 新增首页次级按钮，即首页按钮最大支持数为 2 个；<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 优化返回顶部按钮可自定义开启；<br/>
-        &emsp;- <a-tag color="purple">修复</a-tag> 修复导航栏因 title 过长而显示异常的BUG；<br/>
-        &emsp;- <a-tag color="purple">修复</a-tag> 修复其他可能存在问题的BUG。<br/>
-      </p>
-    </a-timeline-item>
-    <a-timeline-item>
-      v0.1.2
-      <a-tag color="blue">公测版</a-tag>
-      <p>
-        更新内容：<br/>
-        &emsp;- <a-tag color="purple">修复</a-tag> 修复导航栏菜单在某些情况未能正确激活当前菜单项的问题；<br/>
-      </p>
-    </a-timeline-item>
-    <a-timeline-item>
-      v0.1.1
-      <a-tag color="blue">公测版</a-tag>
-      <p>
-        更新内容：<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 优化移动端侧边栏显示效果；<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 优化移动端搜索和菜单图标显示效果。<br/>
-      </p>
-    </a-timeline-item>
-    <a-timeline-item>
+   <a-timeline-item>
       v0.1.0
-      <a-tag color="blue">公测版</a-tag>
+      <a-tag color="blue">yapi-code</a-tag>
       <p>
         更新内容：<br/>
-        &emsp;- <a-tag color="orange">新增</a-tag> 搭载 Ant Design 组件，在 .md 中直接使用； <br/>
-        &emsp;- <a-tag color="orange">新增</a-tag> 添加底部栏，最大支持 4 个栏目数；<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 统一预处理器，使用兼容 Ant Design 样式的 Less 语法；<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 优化内置的提示、警告、危险块的显示效果；<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 优化代码块、行内代码、Blockquote等显示效果；<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 优化首页、导航菜单、Github徽标、侧边栏等显示效果；<br/>
-        &emsp;- <a-tag color="green">优化</a-tag> 优化移动端显示以及动画效果；<br/>
-        &emsp;- <a-tag color="purple">修复</a-tag> 修复其他可能存在问题的BUG。<br/>
+        &emsp;- <a-tag color="orange">新增</a-tag> 支持下载 npm 物料包<br/>
+		&emsp;- <a-tag color="orange">新增</a-tag> 支持通过可视化更新插件配置项<br/>
       </p>
+    </a-timeline-item>
+    <a-timeline-item>
+      v0.0.19
+      <a-tag color="blue">yapi-code</a-tag>
+      <p>
+        更新内容：<br/>
+        &emsp;- <a-tag color="orange">新增</a-tag> 支持快速添加代码片段<br/>
+      </p>
+    </a-timeline-item>
+    <a-timeline-item>
+      v0.0.18
+      <a-tag color="blue">yapi-code</a-tag>
+      <p>
+        更新内容：<br/>
+        &emsp;- <a-tag color="orange">新增</a-tag> 支持可视化操作<br/>
+		&emsp;- <a-tag color="orange">新增</a-tag> 支持物料功能<br/>
+      </p>
+    </a-timeline-item>
+    <a-timeline-item>
+      v0.0.17
+      <a-tag color="blue">yapi-code</a-tag>
+      <p>
+        更新内容：<br/>
+        &emsp;- <a-tag color="green">优化</a-tag> 改用 `webpack` 打包，减小插件包大小<br/>
+      </p>
+    </a-timeline-item>
+    <a-timeline-item>
+      v0.0.16
+      <a-tag color="blue">yapi-code</a-tag>
+      <p>
+        更新内容：<br/>
+        &emsp;- <a-tag color="orange">新增</a-tag> 支持直接在 `package.json` 中配置插件选项，优先级比 `settings.json` 高 <br/>
+      </p>
+    </a-timeline-item>
+    <a-timeline-item>
+      v0.0.15
+      <a-tag color="blue">yapi-code</a-tag>
+      <p>
+        更新内容：<br/>
+		&emsp;- <a-tag color="orange">新增</a-tag> 输出变量 `rawSelectedText`，方便在模板中取到 vs 编辑器中选中的原始文本 <br/>
+		&emsp;- <a-tag color="orange">新增</a-tag> 输出变量 `rawClipboardText`，方便在模板中取到系统剪切板中的原始文本 <br/>
+        &emsp;- <a-tag color="green">优化</a-tag> 如果通过 vs 编辑器中选中的文本无法解析出 `typeName`，通过 `funcName` 拼凑出 `typeName`，比如 `funcName` 为 `fetch`，则 `typeName` 为 `IFetchResult`<br/>
+        &emsp;- <a-tag color="green">优化</a-tag> 编辑器右键菜单插件标题由 `YAPI-CODE->生成代码` 改为 `LOW-CODE->生成代码`<br/>
+      </p>
+    </a-timeline-item>
+    <a-timeline-item>
+      v0.0.12
+      <a-tag color="blue">yapi-code</a-tag>
+      <p>
+        更新内容：<br/>
+        &emsp;- <a-tag color="orange">新增</a-tag> 添加配置项，支持配置：根据 json key 关键字生成相应 mock 数据 <br/>
+        &emsp;- <a-tag color="orange">新增</a-tag> 模板中可从 jsonData 取到 json 数据，jsonKeys 取到 json 数据 key 数组<br/>
+        &emsp;- <a-tag color="green">优化</a-tag> 支持复制对象类型变量作为 json 数据，不需要标准 json 格式<br/>
+        &emsp;- <a-tag color="green">优化</a-tag> 生成的类型可选字段全部转为必选（替换 ?: 为 :）<br/>
+      </p>
+    </a-timeline-item>
+	<a-timeline-item>
+      不知道加了什么😀
     </a-timeline-item>
   </a-timeline>
 </template>

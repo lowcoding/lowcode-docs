@@ -47,6 +47,7 @@ module.exports = {
 					children: ['more/settings'],
 				},
 				'change-log',
+				'todo'
 			],
 		},
 		sidebarDepth: 2,
