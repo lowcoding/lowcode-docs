@@ -26,6 +26,9 @@ title: 可视化生成代码
 
 ![](https://gitee.com/img-hosting/img-hosting/raw/master/2020/11/09/1604914534544.png)
 
+
+> 模板数据可以直接在输入框内修改，也可以通过 `Schema 表单` 进行可视化地编辑。
+
 ### Schema 表单
 
 
