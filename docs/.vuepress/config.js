@@ -38,8 +38,10 @@ module.exports = {
 					children: [
 						'detailed-features/generate-code-by-command',
 						'detailed-features/generate-code-by-webview',
+						'detailed-features/quick-add-snippet',
 					],
 				},
+				'create-materials',
 				{
 					title: '附加说明',
 					collapsable: false,
@@ -47,7 +49,7 @@ module.exports = {
 					children: ['more/settings'],
 				},
 				'change-log',
-				'todo'
+				'todo',
 			],
 		},
 		sidebarDepth: 2,
