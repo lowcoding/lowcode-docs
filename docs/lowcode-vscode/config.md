@@ -33,3 +33,9 @@ yapi项目token。
 mock 相关内容可查看 [生成代码 - 模板数据](/lowcode-vscode/detailed-features/generate-code-by-command.html#模板数据) 相关内容
 
 ## 保存配置
+
+* 保存至项目 `package.json` 文件
+
+* 保存至vscode本地配置
+
+>优先从 `package.json` 读取

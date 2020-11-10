@@ -2,19 +2,21 @@
 title: 文档
 ---
 
-## about
+## 概述
 
-“不需要”写代码 的 mock & 代理 工具。
+mock & 代理 工具。
 
 ![wdZFc6.gif](https://s1.ax1x.com/2020/09/12/wdZFc6.gif)
 
 ![3.gif](https://i.loli.net/2020/09/12/BC3vZwXaG1YqOl6.gif)
 
-## install
+## 安装
+
+### install
 
 `yarn create @lowcoding/mock`
 
-## start
+### start
 
 `yarn start`
 
