@@ -42,12 +42,7 @@ module.exports = {
 					],
 				},
 				'create-materials',
-				{
-					title: '附加说明',
-					collapsable: false,
-					sidebarDepth: 2,
-					children: ['more/settings'],
-				},
+				'config',
 				'change-log',
 				'todo',
 			],
