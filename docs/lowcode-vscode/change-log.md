@@ -8,6 +8,15 @@ title: 更新日志
 
 <template>
   <a-timeline>
+    <a-timeline-item>
+      v0.1.1
+      <a-tag color="blue">yapi-code</a-tag>
+      <p>
+        更新内容：<br/>
+        &emsp;- <a-tag color="orange">优化</a-tag> 优化webview操作<br/>
+		&emsp;- <a-tag color="purple">修复</a-tag> 修复一些问题<br/>
+      </p>
+    </a-timeline-item>
    <a-timeline-item>
       v0.1.0
       <a-tag color="blue">yapi-code</a-tag>
