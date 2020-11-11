@@ -9,6 +9,7 @@ title: TODO
   <a-checkbox :checked="false">取消yapi-code原有模板，合入物料代码片段中</a-checkbox><br>
   <a-checkbox :checked="false">支持筛选远程物料</a-checkbox><br>
   <a-checkbox :checked="false">支持物料分组</a-checkbox><br>
+  <a-checkbox :checked="false">区块支持预设生成目录</a-checkbox><br>
   <a-checkbox :checked="false">拖拽布局</a-checkbox><br>
 </template>
 

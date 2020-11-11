@@ -3,7 +3,7 @@ title: 关于
 ---
 ## 是什么
 
-[lowcode-vscode](https://marketplace.visualstudio.com/items?itemName=wjkang.yapi-code) 是一个 vscode 插件。
+[lowcode-vscode](https://marketplace.visualstudio.com/items?itemName=wjkang.lowcode) 是一个 vscode 插件。
 
 功能特性：
 

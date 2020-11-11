@@ -54,7 +54,7 @@ footer: MIT Licensed | Copyright © 2020-present ruoxie-Handed
 
 ## 安装 lowcode-vscode 插件
 
-[lowcode-vscode](https://marketplace.visualstudio.com/items?itemName=wjkang.yapi-code)
+[lowcode-vscode](https://marketplace.visualstudio.com/items?itemName=wjkang.lowcode)
 
 ## 效果预览
 
