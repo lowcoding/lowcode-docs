@@ -17,7 +17,7 @@ title: 关于
 
 * 支持通过 git 或者 npm 包的方式共享物料。
 
-* 集成 `yapi-code` 的供能，即根据 JSON 数据或者拉取 YAPI 接口定义生成 TS 类型。
+* 集成 `yapi-code` 的功能，即根据 JSON 数据或者拉取 YAPI 接口定义生成 TS 类型。
 
 
 ## 为什么造轮子
