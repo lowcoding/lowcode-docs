@@ -10,6 +10,7 @@ title: TODO
   <a-checkbox :checked="false">支持筛选远程物料</a-checkbox><br>
   <a-checkbox :checked="false">支持物料分组</a-checkbox><br>
   <a-checkbox :checked="false">区块支持预设生成目录</a-checkbox><br>
+  <a-checkbox :checked="false">区块支持配置不拷贝文件</a-checkbox><br>
   <a-checkbox :checked="false">拖拽布局</a-checkbox><br>
 </template>
 
