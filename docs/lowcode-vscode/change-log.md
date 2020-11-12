@@ -8,6 +8,10 @@ title: 更新日志
 
 <template>
   <a-timeline>
+   <a-timeline-item>
+      v1.0.0
+      <a-tag color="green">lowcode</a-tag>
+    </a-timeline-item>
     <a-timeline-item>
       v0.1.1
       <a-tag color="blue">yapi-code</a-tag>

@@ -113,7 +113,7 @@ router.all(new RegExp('^/lowcode/mock/(|^$)'), proxy('https://github.com/wjkang/
 
 > 不需要 mock 并且匹配正则的接口直接转发到后端地址。
 
-### 拦截响应
+## 拦截响应
 
 ```js
 .get('/intercept/response', async (ctx) => {
