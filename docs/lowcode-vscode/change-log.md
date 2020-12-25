@@ -8,6 +8,14 @@ title: 更新日志
 
 <template>
   <a-timeline>
+    <a-timeline-item>
+      v1.0.1
+      <a-tag color="green">lowcode</a-tag>
+      <p>
+        更新内容：<br/>
+		&emsp;- <a-tag color="purple">修复</a-tag> 修复无法解析带注释的JSON数据<br/>
+      </p>
+   </a-timeline-item>
    <a-timeline-item>
       v1.0.0
       <a-tag color="green">lowcode</a-tag>
