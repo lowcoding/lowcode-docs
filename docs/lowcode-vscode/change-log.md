@@ -9,6 +9,42 @@ title: 更新日志
 <template>
   <a-timeline>
     <a-timeline-item>
+		v1.0.5
+		<a-tag color="green">lowcode</a-tag>
+		<p>
+			更新内容：<br/>
+			&emsp;- <a-tag color="orange">新增</a-tag> 区块支持按条件删除文件<br/>
+		</p>
+	</a-timeline-item>
+    <a-timeline-item>
+		v1.0.4
+		<a-tag color="green">lowcode</a-tag>
+		<p>
+			更新内容：<br/>
+			&emsp;- <a-tag color="orange">新增</a-tag> 脚手架功能<br/>
+		</p>
+	</a-timeline-item>
+    <a-timeline-item>
+		v1.0.3
+		<a-tag color="green">lowcode</a-tag>
+		<p>
+			更新内容：<br/>
+			&emsp;- <a-tag color="orange">新增</a-tag> webview 获取 yapi 接口信息支持传入接口方法名称<br/>
+			&emsp;- <a-tag color="purple">修复</a-tag> yapi domain问题<br/>
+		</p>
+	</a-timeline-item>
+	<a-timeline-item>
+		v1.0.2
+		<a-tag color="green">lowcode</a-tag>
+		<p>
+			更新内容：<br/>
+			&emsp;- <a-tag color="orange">新增</a-tag> 支持在vscode状态栏增加打开webview菜单<br/>
+			&emsp;- <a-tag color="orange">新增</a-tag> 代码片段加入vscode智能提示<br/>
+			&emsp;- <a-tag color="orange">新增</a-tag> 代码片段支持vscode原生snippet语法<br/>
+			&emsp;- <a-tag color="green">优化</a-tag> 合并yapi-code模板与物料代码片段<br/>
+		</p>
+	</a-timeline-item>
+    <a-timeline-item>
       v1.0.1
       <a-tag color="green">lowcode</a-tag>
       <p>
@@ -25,7 +61,7 @@ title: 更新日志
       <a-tag color="blue">yapi-code</a-tag>
       <p>
         更新内容：<br/>
-        &emsp;- <a-tag color="orange">优化</a-tag> 优化webview操作<br/>
+        &emsp;- <a-tag color="green">优化</a-tag> 优化webview操作<br/>
 		&emsp;- <a-tag color="purple">修复</a-tag> 修复一些问题<br/>
       </p>
     </a-timeline-item>
