@@ -6,5 +6,5 @@
 * LOW-CODE->生成代码
 * LOW-CODE->添加代码片段
 
-![](https://gitee.com/img-host/img-host/raw/master//2020/11/01/1604161344216.png)
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/01/1604161344216.png)
 

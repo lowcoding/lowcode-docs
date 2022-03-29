@@ -18,11 +18,11 @@ title: 生成代码
 如果剪贴板内数据为`yapi`的接口ID（纯数字内容），则弹出选择框，选择配置的`yapi`项目（具体如何配置可查看插件配置一节）：
 
 
-![](https://gitee.com/img-host/img-host/raw/master//2020/11/02/1604248225586.png)
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/02/1604248225586.png)
 
 选择项目之后，接着弹框选择模板：
 
-![](https://gitee.com/img-host/img-host/raw/master//2020/11/02/1604248342476.png)
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/02/1604248342476.png)
 
 > 模板配置见下一节
 
@@ -235,7 +235,7 @@ return request<<%= typeName %>>(`<%= api.query_path.path.replace(/\{/g,"${params
 ```
 `YAPI` 接口定义如下：
 
-![](https://gitee.com/img-host/img-host/raw/master//2020/11/03/1604410094022.png)
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/03/1604410094022.png)
 
 编译之后生成如下代码：
 ```js

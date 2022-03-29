@@ -66,7 +66,7 @@ module.exports = router
 
 如下为默认的，按需要自行配置即可
 
-![](https://gitee.com/img-host/img-host/raw/master//2020/11/12/1605111557350.png)
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/12/1605111557350.png)
 
 > `200&&number` 一处表示当需要 mock 的字段名为`code`，并且类型为`number`，mock 为固定值 200
 

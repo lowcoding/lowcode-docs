@@ -4,7 +4,7 @@ title: 插件配置
 
 ## 通过 webview 进行配置
 
-![](https://gitee.com/img-hosting/img-hosting/raw/master/2020/11/10/1604991773732.png)
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-hosting@latest/2020/11/10/1604991773732.png)
 
 ## 配置 yapi
 
@@ -22,7 +22,7 @@ title: 插件配置
 
 yapi项目token。
 
-![](https://gitee.com/img-hosting/img-hosting/raw/master/2020/11/10/1604992761667.png)
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-hosting@latest/2020/11/10/1604992761667.png)
 
 `域名`
 
