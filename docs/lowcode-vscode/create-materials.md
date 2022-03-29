@@ -4,7 +4,7 @@ title: 物料开发
 
 ## 下载物料模板
 
-`git clone https://gitee.com/lowcoding/lowcode-materials-template.git`
+`git clone https://gitee.com/lowcode-scaffold/lowcode-materials.git`
 
 或者直接在插件中选择内置的模板下载即可。
 
@@ -37,7 +37,7 @@ materials
    |        └── index.tsx.ejs
    └── snippets # 代码片段目录
       ├── 代码片段1 # 具体代码片段
-      |  ├── config 
+      |  ├── config
       |  |  ├── model.json # 预设模板数据
       |  |  ├── preview.json # 模板描述
       |  |  └── schema.json # 模板 Schema
@@ -52,8 +52,7 @@ materials
             └── template.ejs
 ```
 
->模板描述支持 `title` (标题)，`description` (描述)，`img` (预览图片)。
-
+> 模板描述支持 `title` (标题)，`description` (描述)，`img` (预览图片)，`category`(分类)。
 
 ## 开发调试
 
@@ -65,11 +64,10 @@ materials
 
 将开发好的物料放到 `git` 仓库中，将 `clone` 地址分享出去即可，私有部署的 `git` 环境也可以，只要能 `clone` 就行。
 
-> 如果想把项目中开发好的物料分享出去，也只需要将项目 `git clone` 地址分享出去就行。如果项目资源很多，可能会比较慢。
+> 如果想把项目中开发好的物料分享出去，只需要将项目 `git clone` 地址分享出去就行，或者在仓库 `https://github.com/lowcoding/material` 中提交
 
 **发布 `npm` 包**
 
 将开发好的物料发布到 `npm`，下载的时候可以指定版本下载，比如`@lowcoding/materials-template@1.0.0`
 
-> 如果发布到私有仓库，正确设置npm的registry即可
-
+> 如果发布到私有仓库，正确设置 npm 的 registry 即可

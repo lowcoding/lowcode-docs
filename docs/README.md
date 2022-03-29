@@ -4,41 +4,41 @@ heroImage: /assets/logo.png
 actionText: 快速上手
 actionLink: /#快速上手
 features:
-    - title: 提效工具
-      details: 支持抽离常用代片段、功能区块为模板（物料），代替频繁复制粘贴。
-    - title: 适用范围广
-      details: 与项目使用的框架、库甚至语言无关，能在重复的代码中抽离出模板即可。
-    - title: 可视化操作
-      details: 可直接通过 webview 页面进行操作。
-    - title: 物料开发、共享
-      details: 支持自定义物料开发，并且通过 git 或者 npm 包的方式在不同项目中共享。
+  - title: 提效工具
+    details: 支持抽离常用代片段、功能区块为模板（物料），代替频繁复制粘贴。
+  - title: 适用范围广
+    details: 与项目使用的框架、库甚至语言无关，能在重复的代码中抽离出模板即可。
+  - title: 可视化操作
+    details: 可直接通过 webview 页面进行操作。
+  - title: 物料开发、共享
+    details: 支持自定义物料开发，并且通过 git 或者 npm 包的方式在不同项目中共享。
 footerColumn: 4
 footerWrap:
-    - headline: 🌿生态系统
-      items:
-          - title: lowcode-vscode
-            link: https://github.com/lowcoding/lowcode-vscode
-            details: vscode 插件
-          - title: lowcode-mock
-            link: https://github.com/lowcoding/lowcode-mock
-            details: mock & 代理 工具
-          - title: Document
-            link: https://github.com/lowcoding/lowcode-docs
-            details: 文档源文件
-    - headline: ⚓资源链接
-      items:
-          - title: form-render
-            link: https://x-render.gitee.io/form-render/
-    - headline: 💬社区交流
-      items:
-          - title: 报告 Bug
-            link: https://github.com/lowcoding/lowcode-vscode/issues
-            details: Github issue
-    - headline: ☕作者博客
-      items:
-          - title: 掘金
-            link: https://juejin.im/user/1767670426385528
-            details: 一个帮助开发者成长的社区
+  - headline: 🌿生态系统
+    items:
+      - title: lowcode-vscode
+        link: https://github.com/lowcoding/lowcode-vscode
+        details: vscode 插件
+      - title: lowcode-mock
+        link: https://github.com/lowcoding/lowcode-mock
+        details: mock & 代理 工具
+      - title: Document
+        link: https://github.com/lowcoding/lowcode-docs
+        details: 文档源文件
+  - headline: ⚓资源链接
+    items:
+      - title: form-render
+        link: https://x-render.gitee.io/form-render/
+  - headline: 💬社区交流
+    items:
+      - title: 报告 Bug
+        link: https://github.com/lowcoding/lowcode-vscode/issues
+        details: Github issue
+  - headline: ☕作者博客
+    items:
+      - title: 掘金
+        link: https://juejin.im/user/1767670426385528
+        details: 一个帮助开发者成长的社区
 footer: MIT Licensed | Copyright © 2020-present ruoxie-Handed
 ---
 
