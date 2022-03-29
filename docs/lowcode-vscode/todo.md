@@ -5,18 +5,18 @@ title: TODO
 ## Todo
 
 <template>
-  <a-checkbox :checked="false">支持快速创建区块</a-checkbox><br>
-  <a-checkbox :checked="false">支持筛选远程物料</a-checkbox><br>
-  <a-checkbox :checked="false">支持物料分组</a-checkbox><br>
-  <a-checkbox :checked="false">区块支持预设生成目录</a-checkbox><br>
-  <a-checkbox :checked="false">拖拽布局</a-checkbox><br>
+  <a-checkbox :checked="false">集成 formily ，designable</a-checkbox><br>
 </template>
 
 ## In Progress
 
-<a-checkbox indeterminate>设置常用代码片段，通过快捷键快速使用常用代码片段</a-checkbox><br>
+<a-checkbox indeterminate>重构代码</a-checkbox><br>
 
 ## Done ✓
+<a-checkbox  checked>支持快速创建区块</a-checkbox><br>
+<a-checkbox  checked>支持筛选远程物料</a-checkbox><br>
+<a-checkbox  checked>支持物料分组</a-checkbox><br>
+<a-checkbox  checked>区块支持预设生成目录</a-checkbox><br>
 <a-checkbox  checked>区块支持配置不拷贝文件</a-checkbox><br>
 <a-checkbox  checked>脚手架功能</a-checkbox><br>
 <a-checkbox  checked>支持在vscode状态栏增加打开webview菜单</a-checkbox><br>
