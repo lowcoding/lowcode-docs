@@ -2,7 +2,24 @@
 title: 脚手架开发
 ---
 
-## 开始
+提到脚手架，大家想到的可能就是各种 xxx-cli，本文介绍的是另一种方式：以 vscode 插件的形式实现，提供 web 可视化操作，如下图：
+
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host//2022/03/29/1648566794765.gif)
+
+下面介绍如何安装使用，以及实现原理。
+## 安装使用
+
+vscode 安装 [lowcode](https://marketplace.visualstudio.com/items?itemName=wjkang.lowcode) 插件，此插件是一个效率工具，脚手架只是其中一个功能，更多功能可以查看[文档](https://lowcoding.github.io/)，这集只讲脚手架相关的。
+
+插件安装之后，打开脚手架界面，步骤如下图：
+
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-hosting/2022/03/30/1648608016821.png)
+
+可以直接使用分享的脚手架，勾选选项后直接创建即可：
+
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-hosting/2022/03/30/1648608248392.png)
+
+## 制作脚手架
 
 在模板项目根目录下创建 `lowcode.scaffold.config.json` 文件，将需要做内容动态替换的文件加上 `.ejs` 后缀。
 
@@ -10,7 +27,7 @@ title: 脚手架开发
 
 ![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host//2022/03/29/1648565022174.png)
 
-## 配置
+### 配置
 
 一个完整 `lowcode.scaffold.config.json` 配置：
 
@@ -79,8 +96,9 @@ title: 脚手架开发
 	}
 }
 ```
+`formSchema`：
 
-`formSchema`：[x-render 表单设计器](https://x-render.gitee.io/generator/playground) 导出的的 schema。
+`formSchema.schema` 为 [x-render 表单设计器](https://x-render.gitee.io/generator/playground) 导出的的 schema，会根据 schema 构建出表单界面，`formSchema.formData` 为表单默认数据
 
 ![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host//2022/03/29/1648565391753.png)
 
@@ -105,6 +123,14 @@ title: 脚手架开发
 
 当 `lint` 这个表单项的值为 `false` 的时候，配置的文件夹或文件 ".eslintrc.js"，".prettierrc.js"，将会在创建的项目中排除掉。
 
+### 本地调试脚手架
+
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-hosting/2022/03/30/1648609138759.png)
+
+### 参考项目
+
+[https://github.com/lowcode-scaffold/lowcode-mock](https://github.com/lowcode-scaffold/lowcode-mock)
+
 ## 发布脚手架
 
 将脚手架提交到 git 仓库，注意开放项目的公开访问权限。
@@ -112,8 +138,6 @@ title: 脚手架开发
 ## 使用脚手架
 
 ### 直接使用 git 仓库地址
-
-vscode 中安装 [lowcode 插件](https://marketplace.visualstudio.com/items?itemName=wjkang.lowcode)
 
 ![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host/2021/07/12/1626103888745.png)
 
@@ -127,106 +151,62 @@ vscode 中安装 [lowcode 插件](https://marketplace.visualstudio.com/items?ite
 
 修改 [仓库](https://github.com/lowcoding/scaffold) 中 `index.json` 内容，提交 pr。
 
-```json
-[
-	{
-		"category": "Starter",
-		"icon": "https://s3.ax1x.com/2021/03/07/6M8rdO.png",
-		"uuid": "7ba6b1577a6d406f9c14cd4169da2e98",
-		"scaffolds": [
-			{
-				"uuid": "29066c2267cf4d4e91684e9204cbe021",
-				"title": "vue2-composition-api-tsx",
-				"description": "vue2-composition-api-tsx",
-				"screenshot": "https://cdn.jsdelivr.net/gh/migrate-gitee/img-host/2020/11/05/1604587962875.jpg",
-				"repository": "https://gitee.com/lowcode-scaffold/vue2-composition-api-tsx.git",
-				"repositoryType": "git"
-			}
-		]
-	},
-	{
-		"category": "MVP",
-		"icon": "https://s3.ax1x.com/2021/03/07/6M8rdO.png",
-		"uuid": "d79d4c7069044f6b994a3c42787800e9",
-		"scaffolds": [
-			{
-				"uuid": "ca4cc6765f0b4755b878b05a7b848391",
-				"title": "react-mvp",
-				"description": "mvp by mobx, formily/reactive, react hooks",
-				"screenshot": "https://cdn.jsdelivr.net/gh/migrate-gitee/img-host/2020/11/05/1604587962875.jpg",
-				"repository": "https://gitee.com/lowcode-scaffold/react-mvp.git",
-				"repositoryType": "git"
-			},
-			{
-				"uuid": "ca4cc6765f0b4755b878b05a7b848392",
-				"title": "taro-react-mvp",
-				"description": "taro mvp by mobx, formily/reactive, react hooks",
-				"screenshot": "https://cdn.jsdelivr.net/gh/migrate-gitee/img-host/2020/11/05/1604587962875.jpg",
-				"repository": "https://gitee.com/lowcode-scaffold/taro-react-mvp.git",
-				"repositoryType": "git"
-			},
-			{
-				"uuid": "ca4cc6765f0b4755b878b05a7b848393",
-				"title": "vue-mvp",
-				"description": "mvp by mobx, formily/reactive, vue reactive",
-				"screenshot": "https://cdn.jsdelivr.net/gh/migrate-gitee/img-host/2020/11/05/1604587962875.jpg",
-				"repository": "https://gitee.com/lowcode-scaffold/vue-mvp.git",
-				"repositoryType": "git"
-			},
-			{
-				"uuid": "ca4cc6765f0b4755b878b05a7b848394",
-				"title": "taro-vue-mvp",
-				"description": "mvp by mobx, formily/reactive, vue reactive",
-				"screenshot": "https://cdn.jsdelivr.net/gh/migrate-gitee/img-host/2020/11/05/1604587962875.jpg",
-				"repository": "https://gitee.com/lowcode-scaffold/taro-vue-mvp.git",
-				"repositoryType": "git"
-			},
-			{
-				"uuid": "ca4cc6765f0b4755b878b05a7b848396",
-				"title": "vue2-mvp",
-				"description": "mvp by mobx, formily/reactive, vue composition-api",
-				"screenshot": "https://cdn.jsdelivr.net/gh/migrate-gitee/img-host/2020/11/05/1604587962875.jpg",
-				"repository": "https://gitee.com/lowcode-scaffold/vue2-mvp.git",
-				"repositoryType": "git"
-			},
-			{
-				"uuid": "ca4cc6765f0b4755b878b05a7b848395",
-				"title": "mvp-demo-mock",
-				"description": "mvp-demo-mock",
-				"screenshot": "https://cdn.jsdelivr.net/gh/migrate-gitee/img-host/2020/11/05/1604587962875.jpg",
-				"repository": "https://gitee.com/lowcode-scaffold/mvp-demo-mock.git",
-				"repositoryType": "git"
-			}
-		]
-	},
-	{
-		"category": "Other",
-		"icon": "https://s3.ax1x.com/2021/03/07/6M8rdO.png",
-		"uuid": "a5fc0a2014654339a6785e0d2b8b4809",
-		"scaffolds": [
-			{
-				"uuid": "55daa924065f4d18b78c9263da62923f",
-				"title": "lowcode mock",
-				"description": "mock and proxy tool",
-				"screenshot": "https://cdn.jsdelivr.net/gh/migrate-gitee/img-host/2020/11/05/1604587962875.jpg",
-				"repository": "https://gitee.com/lowcode-scaffold/lowcode-mock.git",
-				"repositoryType": "git"
-			},
-			{
-				"uuid": "16609b8e4c2a410fb7ae0cbd382404ae",
-				"title": "lowcode 物料模板",
-				"description": "lowcode 物料模板",
-				"screenshot": "https://cdn.jsdelivr.net/gh/migrate-gitee/img-host/2020/11/05/1604587962875.jpg",
-				"repository": "https://gitee.com/lowcode-scaffold/lowcode-materials.git",
-				"repositoryType": "git"
-			}
-		]
-	}
-]
+## 实现原理
+
+1. 打开 webview 的时候从 cdn 拉取记录了脚手架列表的 json 文件，渲染列表视图。
+2. 点击某个脚手架，将脚手架的 git 仓库地址传到插件后台，插件后台根据 git 地址下载模版到临时工作目录，并且读取 `lowcode.scaffold.config.json` 文件中的 `formSchema` 返回给 webview。
+```js
+export const downloadScaffoldFromGit = (remote: string) => {
+  fs.removeSync(tempDir.scaffold);
+  execa.sync('git', ['clone', ...remote.split(' '), tempDir.scaffold]);
+  fs.removeSync(path.join(tempDir.scaffold, '.git'));
+  if (
+    fs.existsSync(path.join(tempDir.scaffold, 'lowcode.scaffold.config.json'))
+  ) {
+    return fs.readJSONSync(
+      path.join(tempDir.scaffold, 'lowcode.scaffold.config.json'),
+    );
+  }
+  return {};
+};
+```
+3. webview 拿到 `formSchema` 后弹框渲染动态表单，点提交后将动态表单数据以及生成目录等信息传给插件后台。
+4. 插件后台拿到表单数据后，到临时目录中根据 `conditionFiles` 配置删除掉不需要的文件。然后根据表单数据编译所有 `ejs` 文件，最后将所有文件拷贝到生成目录。
+```js
+export const compileScaffold = async (model: any, createDir: string) => {
+  if (
+    fs.existsSync(path.join(tempDir.scaffold, 'lowcode.scaffold.config.json'))
+  ) {
+    const config = fs.readJSONSync(
+      path.join(tempDir.scaffold, 'lowcode.scaffold.config.json'),
+    );
+    const excludeCompile: string[] = config.excludeCompile || [];
+    if (config.conditionFiles) {
+      Object.keys(model).map((key) => {
+        if (
+          config.conditionFiles[key] &&
+          config.conditionFiles[key].value === model[key] &&
+          Array.isArray(config.conditionFiles[key].exclude)
+        ) {
+          config.conditionFiles[key].exclude.map((exclude: string) => {
+            fs.removeSync(path.join(tempDir.scaffold, exclude));
+          });
+        }
+      });
+    }
+    await renderEjsTemplates(model, tempDir.scaffold, excludeCompile);
+    fs.removeSync(path.join(tempDir.scaffold, 'lowcode.scaffold.config.json'));
+  }
+  fs.copySync(tempDir.scaffold, createDir);
+};
 ```
 
-> 保证 uuid 唯一
+>本地调试时，就是在步骤 2 中将选择的文件夹内容或者当前 vscode 打开的项目内容拷贝到临时工作目录。
 
-## 参考项目
+![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-hosting/2022/03/30/1648622682307.png)
 
-[https://github.com/lowcode-scaffold/lowcode-mock](https://github.com/lowcode-scaffold/lowcode-mock)
+下集再说插件其他功能，插件源码：[https://github.com/lowcoding/lowcode-vscode](https://github.com/lowcoding/lowcode-vscode)
+
+
+
+
