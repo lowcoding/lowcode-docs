@@ -11,18 +11,17 @@ title: 生成代码
 
 此功能为 [yapi-code](https://marketplace.visualstudio.com/items?itemName=wjkang.yapi-code) 最原始的功能。
 
-当执行此功能的时候，插件内部会判断剪贴板内是否为`yapi`的接口ID（纯数字内容）或者 `JSON` 数据。如果都不是则终止执行。
+当执行此功能的时候，插件内部会判断剪贴板内是否为`yapi`的接口 ID（纯数字内容）或者 `JSON` 数据。如果都不是则终止执行。
 
 ## 根据 YAPI 接口定义生成代码
 
-如果剪贴板内数据为`yapi`的接口ID（纯数字内容），则弹出选择框，选择配置的`yapi`项目（具体如何配置可查看插件配置一节）：
+如果剪贴板内数据为`yapi`的接口 ID（纯数字内容），则弹出选择框，选择配置的`yapi`项目（具体如何配置可查看插件配置一节）：
 
-
-![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/02/1604248225586.png)
+![](https://fastly.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/02/1604248225586.png)
 
 选择项目之后，接着弹框选择模板：
 
-![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/02/1604248342476.png)
+![](https://fastly.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/02/1604248342476.png)
 
 > 模板配置见下一节
 
@@ -34,8 +33,8 @@ title: 生成代码
 
 ```js
 const model = {
-  title: 'title',
-  description: 'description',
+	title: "title",
+	description: "description",
 };
 ```
 
@@ -48,8 +47,8 @@ const model = {
 
 ```json
 {
-  "title": "title",
-  "description": "description"
+	"title": "title",
+	"description": "description"
 }
 ```
 
@@ -61,7 +60,7 @@ const model = {
 
 插件会读取当前打开项目的根目录文件夹 `codeTemplate` 内的文件做为模板。
 
-模板文件名必须以 `.ejs` 结尾，模板语法查看 [EJS文档](https://ejs.bootcss.com/)
+模板文件名必须以 `.ejs` 结尾，模板语法查看 [EJS 文档](https://ejs.bootcss.com/)
 
 ![](https://jaycewu.coding.net/p/img-host/d/buket1/git/raw/master/2020/11/02/1604292222596.png)
 
@@ -101,7 +100,7 @@ const model = {
 **type**
 
 剪贴板内 `JSON` 数据或者 `yapi` 接口定义返回数据转换为 TS 接口类型的代码。
-  
+
 <br/>
 
 **requestBodyType**
@@ -126,7 +125,7 @@ const model = {
 
 **api**
 
-为 `yapi` 接口定义信息。具体可查看 `yapi` **获取接口数据**的 [开放api文档](https://yapi.baidu.com/doc/openapi.html)
+为 `yapi` 接口定义信息。具体可查看 `yapi` **获取接口数据**的 [开放 api 文档](https://yapi.baidu.com/doc/openapi.html)
 
 <br/>
 
@@ -141,18 +140,19 @@ const model = {
 生成的 mock 代码，主要是数组类型数据的生成代码。
 
 比如有如下 json 数据：
+
 ```js
 const json = {
 	values: [1, 2, 3, 4, 5, 6],
-}
+};
 ```
 
 对应的 mockCode 为：
 
 ```js
-const list1 = []
+const list1 = [];
 for (let i = 0; i < 10; i++) {
-	list1.push(Random.natural(100, 1000))
+	list1.push(Random.natural(100, 1000));
 }
 ```
 
@@ -165,12 +165,14 @@ for (let i = 0; i < 10; i++) {
 生成的 mock 数据，结合 `mockCode` 使用可创建一个 mock 模板，自动生成接口 mock，比如
 
 ```js
-.get(`xxxxx`, async (ctx, next) => { 
+.get(`xxxxx`, async (ctx, next) => {
 	<%- mockCode %> ctx.body = <%= mockData %>
 })
 
 ```
+
 生成代码如下：
+
 ```js
 .get(`xxxxx`, async (ctx, next) => {
 	const list1 = []
@@ -193,28 +195,27 @@ for (let i = 0; i < 10; i++) {
 
 系统剪贴板中的原始文本
 
-
 ## 模板例子
 
 这是一个拉取 `YAPI` 接口数据，生成前端接口请求代码的模板。
 
 ```js
-<%= type %>  
+<%= type %>
 <% if (api.req_query.length > 0 || api.req_params.length > 0) { %>
 export interface I<%= funcName.slice(0, 1).toUpperCase() + funcName.slice(1) %>Params {
 <% api.req_query.map(query => { %><%= query.name %>: 请手动修改此类型;<% }) %>
-<% api.req_params.map(query => { %><%= query.name %>: 请手动修改此类型;<% }) %> 
+<% api.req_params.map(query => { %><%= query.name %>: 请手动修改此类型;<% }) %>
 }
-<% } %> 
+<% } %>
 <% if (requestBodyType) { %>
-<%= requestBodyType %> 
-<% } %> 
+<%= requestBodyType %>
+<% } %>
 
 /**
-* <%= api.title %> 
-* https://yapi.baidu.com/project/<%= api.project_id %>/interface/api/<%= api._id %> 
-* @author <%= api.username %>  
-* 
+* <%= api.title %>
+* https://yapi.baidu.com/project/<%= api.project_id %>/interface/api/<%= api._id %>
+* @author <%= api.username %>
+*
 <% if (api.req_query.length > 0 || api.req_params.length > 0) { -%>* @param {I<%= funcName.slice(0, 1).toUpperCase() + funcName.slice(1) %>Params} params<% } %>
 <% if (requestBodyType) { -%>* @param {I<%= funcName.slice(0, 1).toUpperCase() + funcName.slice(1) %>Data} data<% } %>
 * @returns
@@ -223,21 +224,23 @@ export function <%= funcName %> (
 <% if (api.req_query.length>0 || api.req_params.length > 0) { %>
 params: I<%= funcName.slice(0, 1).toUpperCase() + funcName.slice(1) %>Params,
 <% } _%>
-<% if (requestBodyType) { %> 
+<% if (requestBodyType) { %>
 data: I<%= funcName.slice(0, 1).toUpperCase() + funcName.slice(1) %>Data
-<% } %> 
+<% } %>
 ) {
 return request<<%= typeName %>>(`<%= api.query_path.path.replace(/\{/g,"${params.") %><% if(api.req_query.length>0) { %>?<% api.req_query.map(query => { %><%= query.name %>=${params.<%= query.name %>}&<% }) %><% } %>`, {
 		method: '<%= api.method %>',
-<% if (requestBodyType) {%>data,<% } %> 
+<% if (requestBodyType) {%>data,<% } %>
 	})
 }
 ```
+
 `YAPI` 接口定义如下：
 
-![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/03/1604410094022.png)
+![](https://fastly.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/03/1604410094022.png)
 
 编译之后生成如下代码：
+
 ```js
 export interface IYapiRequestResult {
   code: number;
@@ -287,4 +290,3 @@ export function fetch(params: IFetchParams, data: IFetchData) {
   );
 }
 ```
-

@@ -18,4 +18,4 @@ title: 快速上手
 
 <p align="center"><img src="https://jaycewu.gitee.io/image-hosting/lowcode-preview.gif"/></p>
 
-![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/03/1604413145869.gif)
+![](https://fastly.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/03/1604413145869.gif)

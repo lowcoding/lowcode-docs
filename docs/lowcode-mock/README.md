@@ -29,17 +29,17 @@ mock server 默认在本地 3000 端口启动，访问 [http://localhost:3000/](
 在 `src\routes` 目录下新建一个 js 文件，将如下内容复制进去保存即可：
 
 ```js
-import KoaRouter from 'koa-router'
-import proxy from '../middleware/Proxy'
-import { delay } from '../lib/util'
-let Mock = require('mockjs')
-let Random = Mock.Random
+import KoaRouter from "koa-router";
+import proxy from "../middleware/Proxy";
+import { delay } from "../lib/util";
+let Mock = require("mockjs");
+let Random = Mock.Random;
 
-const router = new KoaRouter()
-router.get('/your-mock-api', (ctx) => {
-	ctx.body = '你的第一个mock接口'
-})
-module.exports = router
+const router = new KoaRouter();
+router.get("/your-mock-api", (ctx) => {
+	ctx.body = "你的第一个mock接口";
+});
+module.exports = router;
 ```
 
 > 已经内置了创建新 mock 的物料，在 `vscode-lowcode` 的区块功能中直接使用即可。
@@ -66,24 +66,24 @@ module.exports = router
 
 如下为默认的，按需要自行配置即可
 
-![](https://cdn.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/12/1605111557350.png)
+![](https://fastly.jsdelivr.net/gh/migrate-gitee/img-host@latest/2020/11/12/1605111557350.png)
 
 > `200&&number` 一处表示当需要 mock 的字段名为`code`，并且类型为`number`，mock 为固定值 200
 
 ## 延时
 
 ```js
-import KoaRouter from 'koa-router'
-import proxy from '../middleware/Proxy'
-import { delay } from '../lib/util'
-let Mock = require('mockjs')
-let Random = Mock.Random
+import KoaRouter from "koa-router";
+import proxy from "../middleware/Proxy";
+import { delay } from "../lib/util";
+let Mock = require("mockjs");
+let Random = Mock.Random;
 
-const router = new KoaRouter()
-router.get('/delay', (ctx) => {
-	delay(3) // 3 秒后返回结果
-	ctx.body = 'delay'
-})
+const router = new KoaRouter();
+router.get("/delay", (ctx) => {
+	delay(3); // 3 秒后返回结果
+	ctx.body = "delay";
+});
 ```
 
 > 可用于测 loading 效果。
@@ -91,24 +91,27 @@ router.get('/delay', (ctx) => {
 ## http 异常状态码
 
 ```js
-router.get('/httpError', (ctx) => {
-	ctx.status = 401
-	ctx.body = 'http 401'
-})
+router.get("/httpError", (ctx) => {
+	ctx.status = 401;
+	ctx.body = "http 401";
+});
 ```
 
 ## 代理
 
 ```js
-router.get('/proxy', proxy('https://github.com/wjkang/lowcode-mock'), (ctx) => {
-	ctx.body = 'https://github.com/wjkang/lowcode-mock'
-})
+router.get("/proxy", proxy("https://github.com/wjkang/lowcode-mock"), (ctx) => {
+	ctx.body = "https://github.com/wjkang/lowcode-mock";
+});
 ```
 
 > 来自 `/proxy` 的请求转发到 `https://github.com/wjkang/lowcode-mock/proxy` ，用于后端接口可联调的时候跳过本地 mock，转发请求到后端接口。
 
 ```js
-router.all(new RegExp('^/lowcode/mock/(|^$)'), proxy('https://github.com/wjkang/lowcode-mock'))
+router.all(
+	new RegExp("^/lowcode/mock/(|^$)"),
+	proxy("https://github.com/wjkang/lowcode-mock")
+);
 ```
 
 > 不需要 mock 并且匹配正则的接口直接转发到后端地址。
